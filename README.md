@@ -8,7 +8,7 @@ It required only a few modifications which can be seen by diff of second commit.
 ## Installation
 1. Install command-line build tools (needed for gnumake).  For mac, this means installing xcode build tools (https://developer.apple.com/downloads/)
 2. put the ardunio-mk file somewhere.  I put mine in ~/projects/arduino-mk/
-3. create a file named Make in the same directory as your .ino file.  Here is what my Makefile looks like in each of my projects.  It doesn't change unless I use a mega instead of uno:
+3. create a file named `Makefile` (case sensitive) in the same directory as your .ino file.  Here is what my Makefile looks like in each of my projects.  It doesn't change unless I use a mega instead of uno:
 ```
 # Makefile for uno
 BOARD := uno
@@ -19,10 +19,10 @@ _It's that easy!_
 
 ## Usage
 ```
-cd yourproject dir
+cd yourprojectdir
 make install
 ```
-will build and install source to board.  The makefile figures out which usb / com port the arduino is connected to .
+will build and flash sources to board.  The makefile figures out which usb / com port the arduino is connected to .
 
 ```
 make build
