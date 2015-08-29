@@ -336,8 +336,6 @@ upload: target
 ifeq "$(BOARD_BOOTLOADER_PATH)" "caterina"
 	stty $(STTYFARG) $(SERIALDEV) speed 1200
 	sleep 1
-else
-	stty $(STTYFARG) $(SERIALDEV) hupcl
 endif
 	$(AVRDUDE) $(AVRDUDEFLAGS) -U flash:w:$(TARGET).hex:i
 
